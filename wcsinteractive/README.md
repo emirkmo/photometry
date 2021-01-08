@@ -3,7 +3,7 @@
 ### Setup virtual environment (optional, but recommended)
 <pre><code>$ cd /directory/for/virtual/environments
 $ python3 -m venv --copies wcsinteractive
-$ source seeing/bin/activate</code></pre>
+$ source wcsinteractive/bin/activate</code></pre>
 
 ### Installing `wcsinteractive`
 <pre><code>$ cd /directory/of/wcsinteractive
