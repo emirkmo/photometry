@@ -9,3 +9,12 @@ $ source seeing/bin/activate</code></pre>
 <pre><code>$ cd /directory/of/wcsinteractive
 $ pip install -r requirements.txt
 $ python setup.py install</code></pre>
+
+### Running `wcsinteractive`
+<pre><code>$ wcsinteractive</code></pre>
+
+Scale is in arcsec/pixel, Seeing is in arcsec and R.A., Dec. and Radius are in degrees.
+
+Custom catalog coordinates should be,\
+R.A. | Dec. | Magnitude | Proper motion R.A. | Proper motion Dec. \
+where magnitude and the proper motions are optional.
