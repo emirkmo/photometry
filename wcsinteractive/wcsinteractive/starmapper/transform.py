@@ -80,12 +80,10 @@ class Transform (Frame) :
         else:
             m = True if np.sign(matrix[0,0]) == np.sign(matrix[1,1]) else False
 
-        if not m:
-            matrix = matrix.dot(np.diag([-1, 1]))
+        matrix = m if m else matrix.dot(np.diag([-1, 1]))
 
-        _ = np.eye(3); _[:2,:2] = matrix
-        _ = Rotation.from_matrix(_)
-        r = _.as_euler('xyz', degrees=True)[2]
+        matrix3d = np.eye(3); matrix3d[:2,:2] = matrix
+        r = Rotation.from_matrix(matrix3d).as_euler('xyz', degrees=True)[2]
 
         self.set_rotation(r)
         self.set_mirror(m)
