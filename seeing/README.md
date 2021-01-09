@@ -10,7 +10,7 @@ $ source seeing/bin/activate</code></pre>
 $ pip install -r requirements.txt
 $ python setup.py install</code></pre>
 
-## Example
+### Example
 
 <pre><code>$ seeing image.fits --header SEEING</code></pre>
 
