@@ -9,3 +9,6 @@ $ source seeing/bin/activate</code></pre>
 <pre><code>$ cd /directory/of/findingchart
 $ pip install -r requirements.txt
 $ python setup.py install</code></pre>
+
+### Running `findingchart`
+<pre><code>$ findingchart</code></pre>
