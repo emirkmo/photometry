@@ -107,7 +107,7 @@ class StarMapper (BlitFigure) :
             c = SkyCoord(self.hdu.wcs.wcs_pix2world([(0, 0), (w, h)], 0), unit=('deg', 'deg'))
             self.settings.catalog.set_radius(c[0].separation(c[1]).value/2)
 
-            scale = np.sqrt(np.power(self.hdu.wcs.wcs.pc, 2).sum() / 2) * 60 * 60
+            scale = np.sqrt(np.power(self.hdu.wcs.pixel_scale_matrix, 2).sum() / 2) * 60 * 60
             self.settings.image.set_scale(scale)
 
             self.transform.set_from_matrix(self.hdu.wcs.pixel_scale_matrix)
